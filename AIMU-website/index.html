@@ -10,40 +10,17 @@
       body {
         font-family: 'Inter', sans-serif;
         background-color: #050505;
+        overflow-x: hidden;
       }
       .font-display {
         font-family: 'Montserrat', sans-serif;
       }
-      .bg-aimu-black {
-        background-color: #0a0a0a;
-      }
-      .text-aimu-orange {
-        color: #f26b52;
-      }
-      .bg-aimu-orange {
-        background-color: #f26b52;
-      }
-      .border-aimu-orange {
-        border-color: #f26b52;
-      }
-      .selection-orange::selection {
-        background-color: #f26b52;
-        color: white;
-      }
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0a0a0a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #f26b52;
-      }
+      .text-aimu-orange { color: #f26b52; }
+      .bg-aimu-orange { background-color: #f26b52; }
+      .selection-orange::selection { background-color: #f26b52; color: white; }
+      
+      @keyframes scaleUp { from { transform: scale(1); } to { transform: scale(1.1); } }
+      .animate-slow-zoom { animation: scaleUp 20s infinite alternate ease-in-out; }
     </style>
   <script type="importmap">
 {
@@ -60,6 +37,6 @@
 </head>
   <body class="bg-[#050505] text-gray-200 selection-orange">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
